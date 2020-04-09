@@ -10,6 +10,8 @@ Employee.create!(first_name: 'admin', last_name: 'istrator', title: 'A', email: 
 jack = Employee.create!(first_name: 'jackie', last_name: 'lai', title: 'B', email: 'jack@q', password: 'Codeboxx1!', password_confirmation: 'Codeboxx1!') 
 Employee.create!(first_name: '123', last_name: '321', title: '0', email: '123@123', password: 'Codeboxx1!', password_confirmation: 'Codeboxx1!') 
 
+#Intervention.create( author_id: '1', customer_id: '2', building_id: '3', battery_id: '202', column_id: '309', elevator_id: '101', employee_id: '6680', result:'bon', report: 'correct', status: 'encours')
+
 Employee.create!(first_name: 'mathieu', last_name: 'houde', title: 'engineer', email: 'mathieu.houde@codeboxx.biz', password: 'Codeboxx1!', password_confirmation: 'Codeboxx1!') 
 Employee.create!(first_name: 'patrick', last_name: 'thibault', title: 'coach', email: 'tiboclan@gmail.com', password: 'Codeboxx1!', password_confirmation: 'Codeboxx1!') 
 Employee.create!(first_name: 'philippe', last_name: 'motillon', title: 'coach', email: 'philippe.motillon@keyrus.ca', password: 'Codeboxx1!', password_confirmation: 'Codeboxx1!') 

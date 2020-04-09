@@ -170,6 +170,21 @@ ActiveRecord::Schema.define(version: 2020_03_12_171141) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "author", null: false
+    t.bigint "building_id", null: false
+    t.bigint "customer_id", null: false
+    t.bigint"battery_id"
+    t.bigint "column_id"
+    t.bigint "elevator_id"
+    t.string "employee_id"
+    t.string "result"
+    t.string "status"
+    t.string "rapport"
+    t.datetime "start_intervention"
+    t.datetime "end_intervention"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
