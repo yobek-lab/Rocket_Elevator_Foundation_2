@@ -13,7 +13,7 @@ def initialize
 
   # Choose one of the following depending on your authentication choice
   config.token = ENV["ZENDESK_API_TOKEN"]
-  config.password = "RocketElevators"
+  config.password = "Pin921521"
 
   # OAuth Authentication
   #config.access_token = "your OAuth access token"
