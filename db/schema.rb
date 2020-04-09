@@ -180,7 +180,7 @@ ActiveRecord::Schema.define(version: 2020_03_12_171141) do
     t.string "employee_id"
     t.string "result"
     t.string "status"
-    t.string "rapport"
+    t.string "report"
     t.datetime "start_intervention"
     t.datetime "end_intervention"
   end
