@@ -1,11 +1,14 @@
-/*******************	INTERVENTION FORM ***********************/
+//	INTERVENTION FORM 
+
 var _hash = window.location.hash;
 
-//-------------------------------------------------------------------------
+
 $(".building-class, .battery-class, .column-class, .elevator-class").hide();
 
 // Show and hide buildings for customer X
-$("#building").prop("disabled", true); // second dropdown is disabled while first dropdown is empty
+// second dropdown is disabled while first dropdown is empty
+
+$("#building").prop("disabled", true); 
 
 $("#customer").change(function() {
   var customer = $(this).val();
@@ -205,7 +208,7 @@ var column = function() {
   }
 };
 
-// Function that reset all inputs -----------------------------------------------------
+// Function that reset all inputs 
 var clear = function() {
   $(".form-control-1, .form-control-2, .form-control-3, .form-control-4").each(
     function() {
@@ -214,11 +217,4 @@ var clear = function() {
   );
 };
 
-/**
-	BROWSER HASH - from php/contact.php redirect!
-	#alert_success 		= email sent
-	#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-	#alert_mandatory	= email not sent - required fields empty
-**/ jQuery(
-  _hash
-).show();
+ jQuery(_hash).show();

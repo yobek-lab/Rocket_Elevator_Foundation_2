@@ -108,9 +108,9 @@ class InterventionsController < ApplicationController
         @intervention.battery_id = params[:battery]
         @intervention.column_id = params[:column]
         @intervention.elevator_id = params[:elevator]
-        @intervention.result = "Incomplete"
+        @intervention.result = "Incomplete"  #  Default value
         @intervention.report = params[:report]
-        @intervention.status = "Pending"
+        @intervention.status = "Pending"   # Default value
       
       #  Zendesk API  
       # Create a personalized ticket 
@@ -118,8 +118,8 @@ class InterventionsController < ApplicationController
         :subject => "Intervention ticket from employee ##{@intervention.author} - #{author_firstname} #{author_lastname} - Rocket Elevators",
         :requester => {"name": @current_employee.email},
         :comment => { :value => "Employee #{@intervention.author} (#{author_firstname} #{author_lastname}) working for customer #{@intervention.customer_id} (#{@customer_company}) on building  #{@intervention.building_id}, battery #{@intervention.battery_id}, column #{@intervention.column_id} and elevator #{@intervention.elevator_id} has dispatched an employee (#{@intervention.employee_id}) to answer the present ticket.
-        *** An element with no value after a '#' means no specific element has been selected on the form ***
-        Here is a description of the intervention to be made : 
+
+        Here is the report of the intervention : 
         #{@intervention.report}  
         #{added_details}
         "}, 
@@ -134,11 +134,11 @@ class InterventionsController < ApplicationController
           format.html { redirect_to "/interventions" }
           format.json { render :show, status: :created, location: @intervention }
           p @intervention
-          p "coucou"
+          p "Intervention form sent"
         else
           format.html { redirect_to "/interventions" }
           format.json { render json: @intervention.errors, status: :unprocessable_entity }
-          p "wo menute"
+          p "error"
         end
       end
     end
