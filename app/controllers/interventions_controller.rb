@@ -1,5 +1,6 @@
 class InterventionsController < ApplicationController
    
+    before_action :authenticate_employee!
     
   
     def intervention
