@@ -1,10 +1,9 @@
 class InterventionsController < ApplicationController
-    #before_action :set_intervention, only: [:show, :edit, :update, :destroy]
    
+    
   
-    # GET /quotes.json
     def intervention
-      # @interventions = Intervention.all
+     
     end
   
     # Method to get buildings related to a selected customer
@@ -70,18 +69,14 @@ class InterventionsController < ApplicationController
             end
         end
     end
-    # GET /interventions/1.json
-    # def show
-    # end
+    
   
-    # GET /interventions/new
+ 
     def new
       @intervention = Intervention.new
     end
   
-    # GET /interventions/1/edit
-    # def edit
-    # end
+    
     
 
     # The create method contains the variable declarations used in the Zendesk API, and the controller actions after
@@ -117,7 +112,7 @@ class InterventionsController < ApplicationController
         @intervention.report = params[:report]
         @intervention.status = "Pending"
       
-    #==================================== Zendesk API session =============================================#  
+      #  Zendesk API  
       # Create a personalized ticket 
       ZendeskAPI::Ticket.create!(@client, 
         :subject => "Intervention ticket from employee ##{@intervention.author} - #{author_firstname} #{author_lastname} - Rocket Elevators",
@@ -131,7 +126,8 @@ class InterventionsController < ApplicationController
         :submitter_id => @intervention.author,
         :type => "problem",
         :priority => "urgent")
-    #==================================== END Zendesk API session =========================================# 
+        
+    #END Zendesk API session 
   
       respond_to do |format|
         if @intervention.save!
@@ -147,36 +143,13 @@ class InterventionsController < ApplicationController
       end
     end
   
-    # PATCH/PUT /interventions/1.json
-    # def update
-    #   respond_to do |format|
-    #     if @intervention.update(intervention_params)
-    #       format.html { redirect_to "/interventions" }
-    #       # format.html { redirect_to quotes_url}
-    #       format.json { render :show, status: :ok, location: @intervention }
-    #     else
-    #       format.html { render :edit }
-    #       format.json { render json: @intervention.errors, status: :unprocessable_entity }
-    #     end
-    #   end
-    # end
+   
   
-    # DELETE /interventions/1.json
-    # def destroy
-    #   @intervention.destroy
-    #   respond_to do |format|
-    #     format.html { redirect_to "/interventions" }
-    #     format.json { head :no_content }
-    #   end
-    # end
+   
   
-    # private
-    #   # Use callbacks to share common setup or constraints between actions.
-    #   def set_intervention
-    #     @intervention = Intervention.find(params[:id])
-    #   end
+   
   
-      # Never trust parameters from the scary internet, only allow the white list through.
+      
       def intervention_params
         params.permit( :employee_id, :customer_id, :building_id, :battery_id, :column_id, :elevator_id, :result, :report, :status)
       end
