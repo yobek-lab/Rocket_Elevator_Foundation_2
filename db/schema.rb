@@ -177,7 +177,7 @@ ActiveRecord::Schema.define(version: 2020_03_12_171141) do
     t.bigint"battery_id"
     t.bigint "column_id"
     t.bigint "elevator_id"
-    t.string "employee_id"
+    t.bigint "employee_id"
     t.string "result"
     t.string "status"
     t.string "report"
