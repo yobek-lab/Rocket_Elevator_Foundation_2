@@ -1,7 +1,50 @@
+# <b>Foundation week:Rebuild its information system in Individual mode</b>
 # <b>A .NET Core API deployed on Microsoft Azure</b>
-# <b>Rocket Elevator Restful Api</b>
+# <b>Intervations form with the Zendex API feature added</b>
 
-**Week 8 - Offer Services on the Internet** 
+**Week 9 - Foundation week ** 
+
+** Younes Bekkali **
+
+1) a new interventions table is added to the mysql database, database name: YounesDeploy
+2) an intervention form is added to the web site:
+ - the website adress: http://rocketelvators.com
+ - you can either acces to the form from the Homepage menu next to contacts, or form the dashboard of the back office where   you can also access to the interventions database.
+ 
+for the ahthentification:
+log in: admin@example.com, password: Codeboxx1!
+
+3) Creating new GET requests in the REST API
+- the link for the repository: https://github.com/yobek-lab/Rocket-Elevator-Foundation-RestApi_2.git
+- the link for the azure deployment: https://rocketelevatorsapi.azurewebsites.net/
+
+for testing using Postman: take the intervention number 2 as an example
+
+{
+    "id": 2,
+    "status": "Pending",
+    "battery_id": 5,
+    "author": 101,
+    "customer_id": 4,
+    "building_id": 6,
+    "column_id": 71,
+    "elevator_id": 12,
+    "employee_id": 23,
+    "start_intervention": null,
+    "end_intervention": null,
+    "result": "second result",
+    "report": "string"
+}
+GET https://localhost:5001/api/intervention/PendingList .. to get all the interventions status that are Pending
+
+PUT: https://localhost:5001/api/intervention/InProgress/2 .. to make the intervention status to InProgress, and having a staring date, and time
+
+PUT: https://localhost:5001/api/intervention/Completed/2 ..to make the intervention status Completed, and having en ending date, and time
+
+
+
+https://localhost:5001/api/intervention/PendingList
+**Week 8 - Offer Services on the Internet ** 
 
 **Team:** 
 
