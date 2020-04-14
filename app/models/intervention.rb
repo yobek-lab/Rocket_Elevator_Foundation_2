@@ -3,6 +3,7 @@ class Intervention < ApplicationRecord
   # devise :database_authenticatable, 
   #        :recoverable, :rememberable, :validatable
          # to be deleted
+    devise :timeoutable
     belongs_to :employee, optional: true
     belongs_to :customer, optional: true
     belongs_to :building, optional: true

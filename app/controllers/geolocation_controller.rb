@@ -1,5 +1,5 @@
 class GeolocationController < ApplicationController
-    #before_action :authenticate_user!
+    before_action :authenticate_employee!
     def google
         elevators = Elevator.all
         @points_list = []
