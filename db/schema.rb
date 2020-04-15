@@ -129,7 +129,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_171141) do
     t.datetime "updated_at", null: false
     t.datetime "locked_at"
     t.integer "failed_attempts", default: 0, null: false 
-  
+    t.string "unlock_token" # Only if unlock strategy is :email or :both
+    t.index ["unlock_token" ], name: "index_employees_on_unlock_token", unique: true 
     t.index ["email"], name: "index_employees_on_email", unique: true
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
   end
