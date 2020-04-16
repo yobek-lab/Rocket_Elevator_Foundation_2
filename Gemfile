@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 gem 'sendgrid-ruby'
 
+gem "recaptcha"
+
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'colorize'
 gem 'dropbox_api'
