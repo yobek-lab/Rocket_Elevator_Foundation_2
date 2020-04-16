@@ -134,9 +134,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-secure_password (1.0.8)
-      devise (>= 4.0.0, < 5.0.0)
-      railties (>= 5.0.0, < 6.0.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dropbox_api (0.1.18)
@@ -397,8 +394,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   colorize
   date
-  devise (~> 4.2)
-  devise-secure_password (~> 1.0.5)
+  devise
   dropbox_api
   ed25519
   faker

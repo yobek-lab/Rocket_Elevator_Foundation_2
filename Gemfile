@@ -44,8 +44,7 @@ gem 'rails-assets-datatables', source:'http://rails-assets.org'
 gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 5.12.0'
 
-gem 'devise',                 '~> 4.2'
-gem 'devise-secure_password', '~> 1.0.5'
+gem 'devise'
 gem 'activeadmin'
 gem 'faker'
 gem 'date'
