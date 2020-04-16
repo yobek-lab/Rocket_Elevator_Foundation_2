@@ -9,6 +9,9 @@ class QuoteController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
 
+   #render json: @quote #test when submit button form
+   if verify_recaptcha(model: @quote) && @quote.save
+
 #for creating a quote form submission ticket on zendesk panel
 #@quote para llamar desde la cotizacion
 ZendeskAPI::Ticket.create!(@client, 
