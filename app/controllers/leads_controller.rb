@@ -18,7 +18,7 @@ class LeadsController < ApplicationController
     if verify_recaptcha(model: @lead) && @lead.save
       puts params
       flash[:notice] = "We received your request!"
-      redirect_to :index
+      redirect_to action:"new"
 
     #Create ticket on Zendesk from Contact Form
     ZendeskAPI::Ticket.create!(@client, 

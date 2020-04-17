@@ -118,6 +118,7 @@
                                         <hr>
                                     <div class="actions"> 
                                     <%= form.submit class: 'btn btn-primary btn-lg btn-block fs-15', value: 'Submit', :onclick => "alert('Information about your intervention has been sent to the Rocket Elevators servers !')"%>
+                                    <%= flash[:recaptcha_error] %>
                                     <%= recaptcha_tags %>
                                     </div>
                                 </div>
