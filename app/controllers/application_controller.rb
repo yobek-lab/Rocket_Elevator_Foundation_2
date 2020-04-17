@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery prepend: true#, with: :exception
-
+    ensure_security_headers
      #recaptcha
      RECAPTCHA_MINIMUM_SCORE = 0.5
      def verify_recaptcha?(token, recaptcha_action)
