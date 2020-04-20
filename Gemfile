@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
 ruby '2.6.5'
 gem 'sendgrid-ruby'
 
@@ -120,7 +121,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.9'
 end
-
+gem 'chuck_norris'
+gem 'open-weather'
 
 
 
