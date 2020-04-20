@@ -339,8 +339,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    secure_headers (2.5.3)
-      user_agent_parser
+    secure_headers (3.9.0)
+      useragent
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -380,7 +380,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    user_agent_parser (2.6.0)
+    useragent (0.16.10)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
