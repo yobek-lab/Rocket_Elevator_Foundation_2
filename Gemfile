@@ -10,7 +10,7 @@ gem 'strong_password', '~> 0.0.8'
 gem "recaptcha"
 # gem 'secure_headers'
 
-gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'json', '~> 2.3'
 gem 'colorize'
 gem 'dropbox_api'
 gem 'rails-html-sanitizer'#, '~> 1.0.3'
